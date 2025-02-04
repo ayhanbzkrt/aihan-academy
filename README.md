@@ -1,39 +1,48 @@
-# AI'Han Academy Python for AI
+# AI'Han Academy Python for AI  
+*(TR / EN)*
 
-**AI'Han Academy Python for AI**, Python programlama dilini öğrenmek isteyenler için interaktif bir eğitim platformudur. Bu proje, tarayıcı üzerinde Python kodlarını çalıştırmak, modüler ders içeriklerine göz atmak, quizlerle bilgiyi pekiştirmek, ilerleme takibi yapmak, rozet kazanmak, sertifika oluşturmak ve görsel efektlerle (örneğin, konfeti animasyonu) eğlenceli bir öğrenim deneyimi sunmak amacıyla geliştirilmiştir.
+---
 
-## Özellikler
+## Proje Hakkında / About the Project
 
-- **İnteraktif Python Çalıştırma:**  
-  Pyodide entegrasyonu sayesinde, kullanıcılar tarayıcı üzerinde doğrudan Python kodlarını çalıştırabilir.
+**TR:**  
+AI'Han Academy Python for AI, Python programlama dilini öğrenmek ve uygulamalı örneklerle pekiştirmek isteyenler için tasarlanmış interaktif bir eğitim platformudur. Bu proje, tarayıcı üzerinde Python kodlarını çalıştırabilme, modüler ders içerikleri, quizlerle bilgi test etme, ilerleme takibi, rozet ve sertifika oluşturma gibi pek çok özellik sunar.  
+**EN:**  
+AI'Han Academy Python for AI is an interactive learning platform designed for those who want to learn Python programming and reinforce their skills with practical examples. This project allows users to run Python code directly in the browser, access modular lessons, take quizzes to test their knowledge, track their progress, and earn badges and certificates.
 
-- **Çok Dilli Destek (TR/EN):**  
-  Platform, dinamik olarak Türkçe ve İngilizce arasında geçiş yapabilmektedir.
+---
 
-- **Dark Mode Desteği:**  
-  Kullanıcılar, tercihlerine göre koyu ve açık tema arasında geçiş yapabilir.
+## Özellikler / Features
 
-- **Modüler Ders Yapısı:**  
-  Python’un temellerinden ileri konulara kadar (örneğin; veri analizi, web geliştirme, nesne yönelimli programlama, makine öğrenimi vb.) geniş bir yelpazede modüller sunulmaktadır.
+**TR:**  
+- **İnteraktif Python Çalıştırma:** Tarayıcıda Pyodide entegrasyonu sayesinde Python kodlarını doğrudan çalıştırabilirsiniz.  
+- **Çok Dilli Destek (TR/EN):** Proje, kullanıcıların Türkçe ve İngilizce arasında kolayca geçiş yapabilmesini sağlar.  
+- **Dark Mode Desteği:** Açık ve koyu tema seçenekleriyle kullanıcı deneyimi kişiselleştirilebilir.  
+- **Modüler Ders Yapısı:** Temel konulardan ileri düzey konulara kadar geniş bir yelpazede modüller sunar.  
+- **Quiz Sistemi:** Her modüle eklenen quizlerle öğrenilen bilgileri pekiştirir ve test eder.  
+- **İlerleme Takibi ve Rozetler:** Modüllerin tamamlanma durumuna göre ilerleme çubuğu güncellenir, rozetler kazanılır.  
+- **Sertifika Oluşturma ve İndirme:** Tüm modülleri başarıyla tamamlayan kullanıcılar, kişisel bilgilerini girerek sertifika oluşturabilir ve indirebilir.  
+- **Görsel Efektler:** Konfeti animasyonu gibi efektlerle etkileşim daha eğlenceli hale gelir.
 
-- **Quiz Sistemi:**  
-  Her modülde yer alan quizlerle öğrenilen bilgilerin test edilmesi sağlanır. Doğru cevaplanan sorular ilerleme durumuna yansıtılır.
+**EN:**  
+- **Interactive Python Execution:** Run Python code directly in your browser with Pyodide integration.  
+- **Bilingual Support (TR/EN):** Easily switch between Turkish and English for all content.  
+- **Dark Mode Support:** Personalize your experience with light and dark themes.  
+- **Modular Lesson Structure:** Offers a wide range of modules from basic topics to advanced subjects.  
+- **Quiz System:** Reinforce your learning with quizzes at the end of each module.  
+- **Progress Tracking and Badges:** Monitor your course completion with a progress bar and earn badges as you complete modules.  
+- **Certificate Generation and Download:** Users who complete all modules can generate and download a personalized certificate.  
+- **Visual Effects:** Enhance interactivity with visual effects like confetti animations.
 
-- **İlerleme Takibi ve Rozetler:**  
-  Kullanıcıların modülleri tamamlaması durumunda, ilerleme çubuğu güncellenir ve rozetler kazanılır.
+---
 
-- **Sertifika Oluşturma ve İndirme:**  
-  Tüm modülleri tamamlayan kullanıcılar, kişisel bilgilerini girerek kursu başarıyla tamamladıklarına dair sertifika oluşturabilir ve indirebilir.
+## Kurulum ve Kullanım / Installation and Usage
 
-- **Görsel Efektler:**  
-  Konfeti animasyonu gibi görsel öğeler, kullanıcı deneyimini zenginleştirir.
+### GitHub Pages Üzerinde Yayınlama / Deploying on GitHub Pages
 
-## Kurulum ve Kullanım
-
-### GitHub Pages Üzerinde Yayınlama
-
-1. **Depoyu Klonlayın veya Zip İndirerek Çıkarın:**
-
+**TR:**  
+1. **Depoyu Klonlayın veya Zip İndirerek Çıkarın:**  
    ```bash
    git clone https://github.com/ayhanbzkrt/your-repository-name.git
    cd your-repository-name
+
