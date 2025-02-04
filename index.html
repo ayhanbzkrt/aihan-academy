@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI'Han Academy Python for AI - TR/EN</title>
+  
+  <!-- Stiller (styles.css içeriği CodePen'in CSS bölümünde yer alabilir) -->
+  <link rel="stylesheet" href="styles.css" />
+  
+  <!-- Pyodide CDN -->
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+
+  <!-- Konfeti Efekti (canvas-confetti) -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <h1>AI'Han Academy</h1>
+      </div>
+
+      <!-- Dil Seçimi ve Dark Mode Butonları (Zenginleştirme) -->
+      <div class="mode-toggle">
+        <!-- Dil seçimi: TR/EN butonu -->
+        <button id="langToggleBtn" class="mode-btn">EN</button>
+      </div>
+      <div class="mode-toggle">
+        <!-- Dark/Light Mode butonu -->
+        <button id="modeToggleBtn" class="mode-btn">Dark Mode</button>
+      </div>
+
+      <!-- Mobil Menü -->
+      <div class="menu-toggle" id="mobile-menu">
+        &#9776;
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#course-overview" data-tr="Kurs Hakkında" data-en="Course Overview">Kurs Hakkında</a></li>
+        <li><a href="#progress-section" data-tr="İlerleme" data-en="Progress">İlerleme</a></li>
+        <li><a href="#modules" data-tr="Modüller" data-en="Modules">Modüller</a></li>
+        <li><a href="#certificate-section" data-tr="Sertifika" data-en="Certificate">Sertifika</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Course Overview -->
+    <section id="course-overview">
+      <div class="overview-container">
+        <div class="overview-header">
+          <h2 data-tr="AI'Han Academy Python for AI" data-en="AI'Han Academy Python for AI">AI'Han Academy Python for AI</h2>
+          <span class="level" data-tr="Başlangıç" data-en="Beginner">Başlangıç</span>
+        </div>
+        <div class="overview-details">
+          <p>
+            <strong data-tr="Süre" data-en="Duration">Süre</strong>: 
+            <span data-tr="Kendi Hızınızda" data-en="Self Paced">Kendi Hızınızda</span>
+          </p>
+          <p>
+            <strong data-tr="Kod Örnekleri" data-en="Code Examples">Kod Örnekleri</strong>: 
+            <span>25</span>
+          </p>
+          <p>
+            <strong data-tr="Eğitmen" data-en="Instructor">Eğitmen</strong>: 
+            <span data-tr="Ayhan Bozkurt" data-en="Ayhan Bozkurt">Ayhan Bozkurt</span>
+          </p>
+          <p>
+            <strong data-tr="Kuruluş" data-en="Organization">Kuruluş</strong>: 
+            <span data-tr="AI'Han Academy" data-en="AI'Han Academy">AI'Han Academy</span>
+          </p>
+        </div>
+        <div class="what-you-learn">
+          <h3 data-tr="Ne Öğreneceksiniz" data-en="What You Will Learn">Ne Öğreneceksiniz</h3>
+          <ul>
+            <li data-tr="Python programlama temellerini ve AI araçlarını kullanarak..." 
+                data-en="Learn Python basics and AI tools for data manipulation, analysis, and visualization.">
+              Python programlama temellerini ve AI araçlarını kullanarak veri manipülasyonu, analizi ve görselleştirmesi.
+            </li>
+            <li data-tr="Python'un iş, pazarlama ve gazetecilik gibi çeşitli alanlarda..." 
+                data-en="Explore how Python solves real-world problems in business, marketing, and journalism.">
+              Python'un iş, pazarlama ve gazetecilik gibi çeşitli alanlarda gerçek dünya problemlerini çözmek ve verimliliği artırmak için nasıl uygulanabileceğini keşfedin.
+            </li>
+            <li data-tr="Hata ayıklamak, kavramları açıklamak ve öğreniminizi geliştirmek..." 
+                data-en="Utilize AI assistants for debugging, explanations, and enhanced learning.">
+              Hata ayıklamak, kavramları açıklamak ve öğreniminizi geliştirmek için AI asistanlarını kullanın.
+            </li>
+          </ul>
+          <p class="note"
+             data-tr="Not: Her modüldeki tüm kodların en az bir kez çalıştırılması..." 
+             data-en="Note: Each module's code must be run at least once, and all quizzes answered correctly...">
+            Not: Her modüldeki tüm kodların en az bir kez çalıştırılması ve 3 soruluk quizlerin doğru yanıtlanması gerekir. Tüm modüller tamamlanmadan sertifika oluşturulamaz.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Progress Section -->
+    <section id="progress-section">
+      <div class="progress-container">
+        <h2 data-tr="İlerleme Durumu" data-en="Progress Status">İlerleme Durumu</h2>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill" style="width: 0%;">
+            <span id="progress-percent-label">0%</span>
+          </div>
+        </div>
+        <div class="badges-container" id="badges-container">
+          <!-- Rozetler Dinamik Olarak Yüklenecek -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Modules Section -->
+    <section id="modules">
+      <div class="modules-container">
+        <h2 data-tr="Modüller" data-en="Modules">Modüller</h2>
+        <div class="modules-grid" id="modules-grid">
+          <!-- Modül Kartları Dinamik Olarak Yüklenecek -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificate Section -->
+    <section id="certificate-section">
+      <div class="certificate-container">
+        <h2 data-tr="Sertifikanızı Alın" data-en="Get Your Certificate">Sertifikanızı Alın</h2>
+
+        <!-- Sertifikayı Önizle Butonu -->
+        <button id="previewCertificateBtn" class="mode-btn" style="margin-right: 10px;"
+         data-tr="Sertifikayı Önizle" data-en="Preview Certificate">Sertifikayı Önizle</button>
+
+        <!-- Sertifika Oluştur Butonu -->
+        <button id="generateCertificateBtn" class="primary" disabled
+          data-tr="Sertifika Oluştur" data-en="Generate Certificate">Sertifika Oluştur</button>
+        
+        <div id="certificate" class="hidden">
+          <h3 data-tr="AI'Han Academy Python for AI" data-en="AI'Han Academy Python for AI">AI'Han Academy Python for AI</h3>
+          <p data-tr="Bu belge, " data-en="This document certifies that ">Bu belge, 
+            <span id="userName">[İsim]</span>
+            <span data-tr="'nin tüm Python kursunu başarıyla tamamladığını onaylar." data-en=" has successfully completed the entire Python course.">
+              'nin tüm Python kursunu başarıyla tamamladığını onaylar.
+            </span>
+          </p>
+          <p>
+            <span data-tr="Tarih: " data-en="Date: ">Tarih: </span>
+            <span id="completionDate"></span>
+          </p>
+          <canvas id="certificateCanvas" width="800" height="600"></canvas>
+          <button id="downloadCertificateBtn" class="secondary"
+            data-tr="Sertifikayı İndir" data-en="Download Certificate">Sertifikayı İndir</button>
+          <!-- Örnek Sertifika Görseli -->
+          <img src="sample_certificate.png" alt="Sertifika Örneği" class="sample-certificate" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      © 2024 AI'Han Academy All rights Reserved | Email:
+      <a href="mailto:ayhanbzkrt@gmail.com">ayhanbzkrt@gmail.com</a> |
+      <a href="https://github.com" target="_blank">GitHub</a> |
+      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> |
+      <a href="https://medium.com" target="_blank">Medium</a> |
+      <a href="https://itch.io" target="_blank">itch.io</a>
+    </p>
+  </footer>
+
+  <!-- JavaScript (Final Geliştirilmiş script.js) -->
+  <script src="script.js"></script>
+</body>
+</html>
